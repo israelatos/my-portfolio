@@ -1,14 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Basic styling for body and font */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+        }
+        
+        nav li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ff9900;
+        }
+        
+        /* Hero section styling */
+        .hero {
+            background-image: url('https://rb.gy/ocfnx');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem;
+            text-align: center;
+            color: white;
+        }
+        
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Skills list styling */
+        .skills-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem 0;
+        }
+        
+        /* Project styling */
+        .project {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact form styling */
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+        }
+        
+        #contact-form button[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+    <script>
+        // Get the current year
+        var currentYear = new Date().getFullYear();
+        
+        // Set the current year in the footer
+        document.getElementById("current-year").textContent = currentYear;
+    </script>
 </head>
-
 <body>
     <header>
         <nav>
@@ -21,7 +126,7 @@
             </ul>
         </nav>
     </header>
-
+    
     <section id="home">
         <div class="hero">
             <h1>Welcome to My Portfolio</h1>
@@ -29,20 +134,20 @@
             <a href="#projects" class="cta">View Projects</a>
         </div>
     </section>
-
+    
+    <!-- Other sections (About, Skills, Projects, Contact) follow -->
+    
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am passionate about technology and its potential to make a positive impact on people's lives. With a
-                strong desire to learn and grow in the field of programming, I am dedicated to honing my skills and
-                expanding my knowledge in various programming languages and frameworks.</p>
+            <p>I am a dedicated web developer with a passion for technology and its potential to create meaningful experiences. With a strong desire to learn and grow, I am committed to honing my skills and expanding my knowledge in various programming languages and frameworks.</p>
         </div>
     </section>
-
+    
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
-            <ul>
+            <ul class="skills-list">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -51,43 +156,31 @@
             </ul>
         </div>
     </section>
-
+    
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
+            <!-- Project 1 -->
             <div class="project">
                 <h3>Formify</h3>
-                <p>Formify is a simple signup form page that serves as a practical project for learning HTML, CSS, and
-                    Git.</p>
-                <p><strong>Repository:</strong> <a
-                        href="https://github.com/joan-iduemre/formify">joan-iduemre/formify</a></p>
+                <p>Formify is a practical project for learning HTML, CSS, and Git. It features a simple signup form page.</p>
+                <p><strong>Repository:</strong> <a href="https://github.com/joan-iduemre/formify">joan-iduemre/formify</a></p>
             </div>
+            <!-- Project 2 -->
             <div class="project">
                 <h3>Cat App</h3>
-                <p>The Cat App is a project showcasing a simple HTML page featuring cat photos, lists, and a submission
-                    form.</p>
-                <p><strong>Repository:</strong> <a
-                        href="https://github.com/joan-iduemre/cat-app">joan-iduemre/cat-app</a></p>
+                <p>The Cat App showcases a simple HTML page with cat photos, lists, and a submission form.</p>
+                <p><strong>Repository:</strong> <a href="https://github.com/joan-iduemre/cat-app">joan-iduemre/cat-app</a></p>
             </div>
+            <!-- Project 3 -->
             <div class="project">
                 <h3>Cafe Menu</h3>
-                <p>The Cafe Menu project is a simple HTML code that showcases a cafe menu with various coffee options
-                    and their corresponding prices.</p>
-                <p><strong>Repository:</strong> <a
-                        href="https://github.com/joan-iduemre/cafe-menu">joan-iduemre/cafe-menu</a></p>
+                <p>The Cafe Menu project presents a cafe menu with various coffee options and their corresponding prices.</p>
+                <p><strong>Repository:</strong> <a href="https://github.com/joan-iduemre/cafe-menu">joan-iduemre/cafe-menu</a></p>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
+    
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
@@ -99,82 +192,12 @@
             </form>
         </div>
     </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Formify</h3>
-                <p>Formify is a simple signup form page that serves as a practical project for learning HTML, CSS, and
-                    familiarizing oneself with the fundamental concepts of Git and GitHub. Through this repository, I
-                    gained
-                    valuable hands-on experience in version control, repository management, and collaboration techniques
-                    using Git
-                    and GitHub. Furthermore, I had the opportunity to explore the setup of a CI/CD pipeline using GitHub
-                    Pages.</p>
-                <p>By working on Formify, I deepened my understanding of web development, acquired essential skills in
-                    using HTML
-                    and CSS, and practiced using Git and GitHub effectively. This project allowed me to apply
-                    theoretical knowledge
-                    to a real-world scenario, fostering a practical and comprehensive learning experience.</p>
-                <p>Repository: <a href="joan-iduemre/formify">joan-iduemre/formify</a></p>
-            </div>
-            <div class="project">
-                <h3>Cat App</h3>
-                <p>The Cat-App repository is a project that showcases a simple HTML page featuring cat photos, lists,
-                    and a
-                    submission form. The purpose of this project is to provide an interactive experience for users to
-                    explore
-                    cat-related content.</p>
-                <p>Users can browse a gallery of cat photos and click on the provided link to see more. Two lists are
-                    included—one
-                    showcasing things that cats love and the other highlighting the top three things cats hate. Users
-                    can also fill
-                    out a form to submit their own cat photo, specifying whether their cat is indoor or outdoor and
-                    indicating the
-                    cat's personality.</p>
-                <p>Repository: <a href="joan-iduemre/cat-app">joan-iduemre/cat-app</a></p>
-            </div>
-            <div class="project">
-                <h3>Cafe Menu</h3>
-                <p>The Cafe Menu project is a simple HTML code that showcases a cafe menu with various coffee options
-                    and their
-                    corresponding prices. By exploring and working on this project, I have gained a better understanding
-                    of HTML and
-                    its elements. Through writing and structuring the HTML code for the cafe menu, I have learned how to
-                    create
-                    headings, lists, and sections to organize the content effectively. Additionally, I have practiced
-                    using HTML
-                    tags to display text, images, and links within the menu. This project has served as a hands-on
-                    experience that
-                    has deepened my knowledge and proficiency in HTML.</p>
-                <p>Working on the Cafe Menu project has provided me with practical experience in web development using
-                    HTML. It
-                    has allowed me to apply the concepts and techniques learned in HTML to a real-world scenario. By
-                    customizing and
-                    modifying the code, I have enhanced my skills in HTML syntax, element manipulation, and styling.
-                    This project
-                    has been instrumental in honing my HTML abilities and has contributed significantly to my growth as
-                    a web
-                    developer.</p>
-                <p>Repository: <a href="joan-iduemre/cafe-menu">joan-iduemre/cafe-menu</a></p>
-            </div>
-        </div>
-    </section>
-
-
+    
     <footer>
-        <p>&copy; <span id="current-year"></span> Joan Iduemre | All rights reserved</p>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Joan Iduemre | All rights reserved</p>
+        </div>
     </footer>
-
-    <script>
-        // Get the current year
-        var currentYear = new Date().getFullYear();
-
-        // Set the current year in the footer
-        document.getElementById("current-year").textContent = currentYear;
-    </script>
-
+    
 </body>
-
 </html>
